@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
         // json 2 объект
         val resultObject = gson.fromJson(json_string, JsonModel::class.java )
-        Log.e("LOG =>", resultObject.toString())
 
         findViewById<TextView>(R.id.tv_Text).text = resultObject.toString()
 
@@ -39,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             addProperty("createdAt", resultObject.createdAt)
             addProperty("updatedAt", resultObject.updatedAt)
         })
-        Log.e("LOG =>", resultJsonString)
         findViewById<TextView>(R.id.tv_Text2).text = resultJsonString
 
     }
